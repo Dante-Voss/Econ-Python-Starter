@@ -1,10 +1,16 @@
 import pandas as pd
 
+# Simple example dataset (economic-style)
 data = {
-  "Year" : [2020, 2021, 2022, 2023], 
-  "GDP Growth": [-3.4, 5.9, 2.1, 2.5]
+    "year": [2020, 2021, 2022, 2023],
+    "gdp_growth": [-3.4, 5.7, 2.1, 2.4]
 }
 
 df = pd.DataFrame(data)
-print("Sample GDP growth data:")
+
+# Basic analysis
+average_growth = df["gdp_growth"].mean()
+
+print("GDP Growth Data:")
 print(df)
+print("\nAverage GDP growth:", round(average_growth, 2), "%")
